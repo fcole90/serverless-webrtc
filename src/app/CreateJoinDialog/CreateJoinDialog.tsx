@@ -1,20 +1,22 @@
-import Button from "../../components/Button/Button"
+import { Box, Button, Typography } from '@mui/material'
+import { Stack } from '@mui/system'
 
 
 const CreateJoinDialog = () => (
-  <div style={{ width: '50%', border: 'solid 1px grey', borderRadius: '15px', padding: '2rem' }}>
-    <h2>
+
+  <Box sx={(theme) => ({ width: '50%', border: `solid 2px ${theme.palette.primary.main}`, borderRadius: '15px', padding: '2rem' })}>
+    <Typography variant='h4'>
       Create or join a room?
-    </h2>
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-end', gap: '1rem' }}>
-      <Button>
+    </Typography>
+    <Stack direction='row' justifyContent='flex-end' spacing='1rem'>
+      <Button variant='outlined'>
         Join
       </Button>
-      <Button>
+      <Button variant='outlined'>
         Create
       </Button>
-    </div>
-  </div>
+    </Stack>
+  </Box>
 )
 
 export default CreateJoinDialog
